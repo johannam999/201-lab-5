@@ -115,20 +115,29 @@ testSumArray(testArray);
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyArray() that takes an array of numbers as its argument and 
+returns an array whose first element is the product of those numbers, and the second element 
+is a string that EXACTLY follows this example and concatenates a message using the arguments 
+that were passed into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this.
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, 
+use your multiply() function that you've already created. You're going to have to be resourceful to 
+figure out how to do this.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, 
+uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+//eslint-disable-line
+function multiplyArray(testArray){ 
+    var sum5 = multiply(testArray[0],testArray[1])[0];
+    var sum6 = multiply(sum5, testArray[2])[0];
+    var msg = 'The numbers ' + testArray + ' have a product of ' + sum6 + '.';
+    return [sum6, msg];
+} 
 
-}
-
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
